@@ -11,22 +11,12 @@ function ProductIndex({searchQuery, updateCart}) {
     }
   }).map(product => {
     return (
-      <Product 
-        id={product.id}
-        name={product.name}
-        description={product.description}
-        category={product.category}
-        price={product.price}
-        quantity={product.quantity}
-        image={product.image}
-        weight={product.weight}
-        model={product.model}
-        updateCart={updateCart} />
+      <Product product={product} />
     )
   })
   
   return (
-    <div>
+    <div className='products-container'>
       {productList}
     </div>
   )
